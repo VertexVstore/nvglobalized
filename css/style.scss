@@ -10,6 +10,369 @@
 	--border:.1rem solid rgba(0,0,0,.3);
 }
 
+// FUTURISTIC ADDED DESIGN FROM ME STARTS HERE
+:root {
+  /* --- FUTURISTIC ACCENTS (NEW ONLY) --- */
+  --neon-blue: #00f5ff;
+  --neon-purple: #7b2cff;
+  --glass: rgba(255, 255, 255, 0.06);
+  --glow-blue: 0 0 15px rgba(0, 245, 255, 0.35);
+  --glow-purple: 0 0 15px rgba(123, 44, 255, 0.35);
+}
+
+.header,
+.search-form,
+.login-form,
+.contact-info,
+.box,
+.slide {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.btn:hover,
+.header .icons div:hover {
+  box-shadow: var(--glow-blue);
+  transform: translateY(-2px);
+}
+
+.heading {
+  text-shadow: 0 0 10px rgba(245,191,35,0.3);
+}
+
+.box,
+.about-column,
+.projects .box {
+  transition: all 0.3s ease;
+}
+
+.box:hover,
+.about-column:hover,
+.projects .box:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+}
+
+body {
+  background: radial-gradient(
+    circle at top,
+    rgba(255,255,255,0.03),
+    transparent 60%
+  );
+}
+
+.home .swiper-button-next,
+.home .swiper-button-prev {
+  border-radius: 50%;
+  background: rgba(255,255,255,0.08);
+  backdrop-filter: blur(10px);
+}
+
+.home .swiper-button-next:hover,
+.home .swiper-button-prev:hover {
+  box-shadow: var(--glow-blue);
+}
+
+// PREMIUM FEEL STATRS HERE
+:root {
+  --lux-gold: #f5bf23;
+  --lux-dark: #0b0b10;
+  --lux-glass: rgba(255,255,255,0.06);
+  --lux-border: rgba(255,255,255,0.12);
+  --lux-shadow: 0 20px 60px rgba(0,0,0,0.35);
+  --lux-glow: 0 0 25px rgba(245,191,35,0.25);
+}
+
+.cursor-glow {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  background: radial-gradient(circle, rgba(245,191,35,0.5), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(12px);
+  z-index: 9999;
+}
+
+.header {
+  padding: 2rem 10%;
+  background: rgba(10,10,15,0.75);
+  backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(245,191,35,0.15);
+}
+
+.box,
+.about-column,
+.projects .box-container .box {
+  transition: all 0.4s ease;
+}
+
+.box:hover,
+.about-column:hover,
+.projects .box-container .box:hover {
+  transform: translateY(-12px);
+  box-shadow: var(--lux-shadow), var(--lux-glow);
+  border: 1px solid rgba(245,191,35,0.25);
+}
+
+.projects .box-container .box .image img {
+  transition: transform 0.6s ease;
+}
+
+.projects .box-container .box:hover .image img {
+  transform: scale(1.08);
+  filter: contrast(1.1) brightness(1.05);
+}
+
+.projects {
+    position: relative;
+    overflow: hidden;
+}
+
+.project-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+}
+
+.projects .heading,
+.projects .box-container {
+    position: relative;
+    z-index: 2;
+}
+
+.project-bg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.35);
+	color: var(--blur);
+}
+
+.projects .heading{
+	color: #fff;
+}
+.heading {
+  font-size: 3.8rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--white);
+  position: relative;
+}
+
+.heading::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 3px;
+  background: var(--lux-gold);
+  box-shadow: var(--lux-glow);
+}
+
+.home .slide::before {
+  background: linear-gradient(
+    120deg,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.3),
+    transparent
+  );
+}
+
+.home .content h3 {
+  font-size: 6rem;
+  background: linear-gradient(90deg, #fff, var(--lux-gold));
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 30px rgba(245,191,35,0.15);
+}
+
+.btn {
+  background: transparent;
+  border: 1px solid var(--lux-gold);
+  color: var(--lux-gold);
+  border-radius: 50px;
+  letter-spacing: 1px;
+}
+
+.btn:hover {
+  background: var(--lux-gold);
+  color: #000;
+  box-shadow: var(--lux-glow);
+}
+
+.about .box-container .box {
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(245,191,35,0.1);
+}
+
+.about .box-container .box h3 {
+  color: var(--lux-gold);
+}
+
+.services .box-container .box {
+  background: rgba(255,255,255,0.04);
+  border-left: 3px solid var(--lux-gold);
+  transition: all 0.3s ease;
+}
+
+.services .box-container .box:hover {
+  transform: translateY(-10px);
+  border-left: 3px solid #fff;
+}
+
+/* ================================
+   LUXURY FLOAT MOTION EFFECT
+================================ */
+
+.swiper-slide {
+  transition: transform 0.8s ease, opacity 0.8s ease;
+}
+
+/* Active slide floats slightly left */
+.swiper-slide-active {
+  transform: scale(1.03);
+  opacity: 1;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.2));
+  z-index: 10;
+}
+
+/* Previous slide drifts backward */
+.swiper-slide-prev {
+  transform: translateX(-60px) scale(0.95);
+  opacity: 0.6;
+}
+
+/* Next slide gently peeks */
+.swiper-slide-next {
+  transform: translateX(30px) scale(0.97);
+  opacity: 0.7;
+}
+
+/* Smooth hover luxury lift */
+.swiper-slide:hover {
+  transform: scale(1.05);
+  transition: 0.5s ease;
+}
+// PREMIUM FEEL ENDS HERE
+
+.home .slide::before {
+  background: linear-gradient(
+    120deg,
+    rgba(255,255,255,0.85),
+    rgba(255,255,255,0.2),
+    rgba(0,0,0,0.05)
+  );
+}
+
+/* =========================
+   LIGHT DEPTH SYSTEM
+========================= */
+
+.box, .swiper-slide {
+  position: relative;
+  overflow: hidden;
+}
+
+.box::before, .swiper-slide::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(245,191,35,0.15), transparent 60%);
+  transform: translateX(-50%);
+  transition: 0.6s;
+  opacity: 0;
+}
+
+.box:hover::before, .swiper-slide-active::before {
+  opacity: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: -50%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(245,191,35,0.08),
+    transparent
+  );
+  transform: skewX(-20deg);
+  animation: scanMove 6s infinite linear;
+  pointer-events: none;
+  z-index: 999;
+}
+
+@keyframes scanMove {
+  0% { left: -60%; }
+  100% { left: 120%; }
+}
+
+.header,
+.box,
+.services .box-container .box,
+.pricing .box-container .box {
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  will-change: transform;
+}
+
+section {
+  opacity: 0.4;
+  transform: translateY(60px) scale(0.98);
+  transition: all 1s cubic-bezier(0.16, 1, 0.3, 1);
+  filter: blur(4px);
+}
+
+section.in-view {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  filter: blur(0);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(
+    circle at var(--x, 50%) var(--y, 50%),
+    rgba(245,191,35,0.10),
+    transparent 40%
+  );
+  pointer-events: none;
+  z-index: 1;
+  transition: 0.1s;
+}
+
+.btn, .box, .swiper-slide {
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.6s ease;
+}
+
+.btn:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+}
+
+.box,
+.services .box-container .box,
+.pricing .box-container .box {
+  background: rgba(255,255,255,0.06);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255,255,255,0.15);
+}
+// FUTURISTIC ADDED DESIGN FROM ME ENDS HERE
+
 *{
 	font-family: 'Rubik', sans-serif;
 	margin: 0; padding: 0;
@@ -114,7 +477,24 @@ section{
 	align-items: center;
 	justify-content: space-between;
 	z-index: 1000;
-	background: var(--white);
+	// background: var(--white);
+	background: rgba(15, 15,20,0.55);
+	backdrop-filter: blur(16px);
+	-webkit-backdrop-filter: blur(16px);
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+	box-shadow: 0 10px 40px rgba(0,0,0,0.25);
+
+	&::before {
+		content: '';
+		position: absolute;
+		inset: 0;
+		background: linear-gradient(
+			120deg,
+			rgba(255,255,255,0.15),
+			transparent 40%
+		);
+		pointer-events: none;
+	}
 
 	.logo{
 		@include titleText(2.5rem);
@@ -255,20 +635,22 @@ section{
 .contact-info{
 	position: fixed;
 	top: 0; right: 0;
-	width: 35rem;
+	width: min(90vw, 420px);
 	background: var(--white);
-	height: 100%;
+	height: 100vh;
 	text-align: center;
 	z-index: 1100;
 	padding: 0 2rem;
 	padding-top: 5rem;
 	display: none;
+	flex-direction: column;
+	overflow-y: auto;
 
 	&.active{
 		box-shadow: 0 0 0 100vw rgba(0,0,0,.7);
 		display: block;
 	}
-
+	
 	#close-contact-info{
 		position: absolute;
 		top: 1rem; right: 1.5rem;
@@ -465,11 +847,11 @@ section{
 			p{
 				@include graphText(1rem);
 				border: var(--border);
-				/*font-family: monospace;
+				font-family: monospace;
 				white-space: pre-wrap;
 				word-break: break-word;
 				text-align: left;
-				line-height: 1.6;*/
+				line-height: 1.6;
 			}
 		}
 	}
@@ -895,4 +1277,132 @@ i{
 		flex-direction: column;
 	}
 
+}
+
+@media (min-width: 768px){
+	.contact-info{
+		padding-top: 3rem;
+	}
+	.contact-info .info{
+		padding: 1.2rem 0;
+	}
+}
+
+/* =========================
+   LUXURY GLASS SYSTEM
+========================= */
+
+:root {
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.2);
+  --blur: blur(18px);
+}
+
+/* Navbar upgrade */
+.header {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  border-bottom: 1px solid var(--glass-border);
+}
+
+/* Floating glass cards */
+.box,
+.services .box-container .box,
+.pricing .box-container .box {
+  background: var(--glass);
+  backdrop-filter: var(--blur);
+  -webkit-backdrop-filter: var(--blur);
+  border: 1px solid var(--glass-border);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.08);
+  transition: 0.4s ease;
+}
+
+.box:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 30px 80px rgba(0,0,0,0.15);
+}
+
+/* =========================
+   PARALLAX DEPTH LAYER
+========================= */
+
+.home .slide {
+    position: relative;
+    overflow: hidden;
+}
+
+.home .slide .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.home .slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0,0,0,0.5); /* dark overlay */
+    z-index: 0;
+}
+
+.home .slide .content {
+    position: relative;
+    z-index: 1;
+}
+
+.home .slide {
+  background-attachment: fixed;
+  transform: scale(1.05);
+}
+
+
+/* smooth luxury fade-in */
+section {
+  animation: fadeUp 1s ease;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =========================
+   ELITE SCROLL DEPTH SYSTEM
+========================= */
+
+section {
+  transform: translateZ(0);
+  will-change: transform, opacity;
+}
+
+/* soft cinematic entrance per section */
+section {
+  animation: eliteReveal 1.2s ease both;
+}
+
+@keyframes eliteReveal {
+  from {
+    opacity: 0;
+    transform: translateY(80px) scale(0.98);
+    filter: blur(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    filter: blur(0);
+  }
 }
