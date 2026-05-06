@@ -97,6 +97,7 @@ window.addEventListener("scroll", () => {
 var swiper = new Swiper(".home-slider", {
   loop: true,
   centeredSlides: true,
+  autoplay:{ delay: 3500,},
   grabCursor: true,
   speed: 1400,
   spaceBetween: 40,
