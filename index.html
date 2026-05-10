@@ -17,7 +17,10 @@
 	<link rel="stylesheet" href="css/style.css">
 
 	<!-- custom javascript file link -->
+	 <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js"></script>
+	 <script src="js/supabase.js"></script>
 	 <script src="js/script.js" defer></script>
+
 </head>
 <body>
 
@@ -27,8 +30,8 @@
 
 		<nav class="navbar">
 			<a href="#home">home</a>
-			<a href="#about">about</a>
-			<a href="#services">service</a>
+			<a href="#about">fields</a>
+			<a href="#services">work</a>
 			<a href="#projects">pictures</a>
 			<a href="#pricing">list</a>
 			<a href="#contact">contact</a>
@@ -49,15 +52,15 @@
 
 		<form action="" class="login-form">
 			<h3>login form</h3>
-			<input type="email" placeholder="enter your email" class="box">
-			<input type="password" placeholder="enter your password" class="box">
+			<input type="email" id="email" placeholder="enter your email" class="box">
+			<input type="password" id="password" placeholder="enter your password" class="box">
 			<div class="flex">
 				<input type="checkbox" name="" id="remember-me">
 				<label for="remember-me">remember me</label>
 				<a href="#">forgot password?</a>
 			</div>
-			<input type="submit" value="login now" class="btn">
-			<p>don't have an account <a href="#">create one!</a></p>
+			<input type="submit" id="submit" value="login now" class="btn">
+			<p>don't have an account <a href="signup.html">create one!</a></p>
 		</form>
 
 	</header>
@@ -116,34 +119,41 @@
 
     				<div class="content">
         				<h3>we provide best services</h3>
-        				<p>Lorem ipsum dolor sit amet...</p>
-        				<a href="#about" class="btn">get started</a>
+        				<!-- <p>Lorem ipsum dolor sit amet...</p>
+        				<a href="#about" class="btn">get started</a> -->
     				</div>
 
 				</section>
 
-				<section class="swiper-slide slide" style="background: url(images/home-slide-2.jpg) no-repeat;" >
+				<section class="swiper-slide slide">
+					<video class="bg-video" autoplay muted loop playsinline preload="auto">
+        				<source src="images/vid/VID-20260309-WA0070.mp4" type="video/mp4">
+    				</video>
+
 					<div class="content">
 						<h3>making dream come to life</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, laboriosam. Nulla iure quasi vero necessitatibus eius ducimus sint? Fugit obcaecati fuga ab et quisquam voluptatibus dolore hic possimus perferendis aut.</p>
-						<a href="#about" class="btn">get started</a>
+						<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, laboriosam. Nulla iure quasi vero necessitatibus eius ducimus sint? Fugit obcaecati fuga ab et quisquam voluptatibus dolore hic possimus perferendis aut.</p>
+						<a href="#about" class="btn">get started</a> -->
 					</div>
 
 				</section>
 
-				<section class="swiper-slide slide" style="background: url(images/home-slide-3.jpg) no-repeat;" >
+				<section class="swiper-slide slide" >
+					<video class="bg-video" autoplay muted loop playsinline preload="auto">
+        				<source src="images/vid/VID-20260309-WA0070.mp4" type="video/mp4">
+    				</video>
 					<div class="content">
 						<h3>from concept to creation</h3>
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, laboriosam. Nulla iure quasi vero necessitatibus eius ducimus sint? Fugit obcaecati fuga ab et quisquam voluptatibus dolore hic possimus perferendis aut.</p>
-						<a href="#about" class="btn">get started</a>
+						<!-- <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, laboriosam. Nulla iure quasi vero necessitatibus eius ducimus sint? Fugit obcaecati fuga ab et quisquam voluptatibus dolore hic possimus perferendis aut.</p>
+						<a href="#about" class="btn">get started</a> -->
 					</div>
 
 				</section>
 
 			</div>
 
-			<div class="swiper-button-next"></div>
-    		<div class="swiper-button-prev"></div>
+			<!-- <div class="swiper-button-next"></div>
+    		<div class="swiper-button-prev"></div> -->
 
 		</div>
 
@@ -237,7 +247,7 @@
         		</div>
 
         		<div class="swiper-slide">
-            		<img src="images/IMG-20260312-WA0020.jpg" alt="">
+            		<img src="images/IMG-20260309-WA0075.jpg" alt="">
         		</div>
 
         		<div class="swiper-slide">
@@ -455,78 +465,145 @@
 
 	<!-- Updated about starts -->
 	<section class="about" id="about">
-    	<h1 class="heading">about us</h1>
+    	<h1 class="heading">Field Work</h1>
 
 	    <div class="row">
-	        <div class="about-column">
-	            <div class="video">
-	                <video src="images/vid/VID-20260309-WA0066.mp4" loop muted autoplay></video>
-	            </div>
-	            <div class="content">
-	                <h3>We will provide you the best work</h3>
-	                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-	                <a href="#services" class="btn">read more</a>
-	            </div>
-	        </div>
 
-	        <div class="about-column">
-	            <div class="video">
-	                <video src="images/vid/VID-20260309-WA0155.mp4" loop muted autoplay></video>
-	            </div>
-	            <div class="content">
-	                <h3>We will provide you the best work</h3>
-	                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-	                <a href="#services" class="btn">read more</a>
-	            </div>
-	        </div>
+			<div class="row row-left">
 
-	        <div class="about-column">
-	            <div class="video">
-	                <video src="images/vid/VID-20260309-WA0153.mp4" loop muted autoplay></video>
-	            </div>
-	            <div class="content">
-	                <h3>We will provide you the best work</h3>
-	                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-	                <a href="#services" class="btn">read more</a>
-	            </div>
-	        </div>
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0154.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
 
-	        <div class="about-column">
-	            <div class="video">
-	                <video src="images/vid/VID-20260309-WA0165.mp4" loop muted autoplay></video>
-	            </div>
-	            <div class="content">
-	                <h3>We will provide you the best work</h3>
-	                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-	                <a href="#services" class="btn">read more</a>
-	            </div>
-	        </div>
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0156.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
 
-	         <div class="about-column">
-	            <div class="video">
-	                <video src="images/vid/VID-20260309-WA0159.mp4" loop muted autoplay></video>
-	            </div>
-	            <div class="content">
-	                <h3>We will provide you the best work</h3>
-	                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-	                <a href="#services" class="btn">read more</a>
-	            </div>
-	        </div>
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0157.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
 
-	         <div class="about-column">
-	            <div class="video">
-	                <video src="images/vid/VID-20260309-WA0163.mp4" loop muted autoplay></video>
-	            </div>
-	            <div class="content">
-	                <h3>We will provide you the best work</h3>
-	                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-	                <a href="#services" class="btn">read more</a>
-	            </div>
-	        </div>
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0066.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>Factory Color Mixing</h3>
+						<p>We will provide you the best work</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0155.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We will provide you the best work</h3>
+						<p>Services you never find else where</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0153.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+			</div>
+	        
 	    </div>
 
+		<div class="row">
+			<div class="row row-right">
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0154.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0156.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0060.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+				
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0061.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0064.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+				<div class="about-column">
+					<div class="video">
+						<video src="images/vid/VID-20260309-WA0069.mp4" loop muted autoplay></video>
+					</div>
+					<div class="content">
+						<h3>We work with entrepreneurs</h3>
+						<p>We make dreams come to life.</p>
+					</div>
+				</div>
+
+			</div>
+		</div>
+
+		<a href="#services" class="btn">read more</a>
+
 	    <div class="box-container">
-	        <div class="box"><h3 class="counter" data-target="1500">0</h3><p>years of experience</p></div>
+	        <div class="box"><h3>10+</h3><p>years of experience</p></div>
 	        <div class="box"><h3>1500+</h3><p>project completed</p></div>
 	        <div class="box"><h3>743+</h3><p>satisfied clients</p></div>
 	        <div class="box"><h3>157+</h3><p>active workers</p></div>
@@ -538,58 +615,201 @@
 
 	<section class="services" id="services">
 
-		<h1 class="heading">our services</h1>
+    	<h1 class="heading">Our work</h1>
 
-		<div class="box-container">
+    	<!-- TOP ROW -->
+    	<div class=" swiper services-slider top-slider">
 
-			<div class="box">
-				<img src="images/IMG-20260309-WA0093.jpg" alt="" loading="lazy">
-				<h3>building construction</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
+        	<div class="swiper-wrapper">
 
-			<div class="box">
-				<img src="images/IMG-20260309-WA0096.jpg" alt="" loading="lazy">
-				<h3>house renovation</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0093.jpg" alt="">
 
-			<div class="box">
-				<img src="images/IMG-20260309-WA0113.jpg" alt="" loading="lazy">
-				<h3>architechure design</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
+                	<div class="overlay"></div>
 
-			<div class="box">
-				<img src="images/IMG-20260309-WA0081.jpg" alt="" loading="lazy">
-				<h3>material supply</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
+                	<div class="content">
+                    	<h3>Luxury Construction</h3>
+                    	<p>Modern premium infrastructure and elegant architecture.</p>
+                	</div>
+            	</div>
 
-			<div class="box">
-				<img src="images/IMG-20260312-WA0020.jpg" alt="" loading="lazy">
-				<h3>construction consultant</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0080.jpg" alt="">
+                	<div class="overlay"></div>
 
-			<div class="box">
-				<img src="images/IMG-20260309-WA0132.jpg" alt="" loading="lazy">
-				<h3>interion design</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
+                	<div class="content">
+                    	<h3>Interior Design</h3>
+                    	<p>Luxury interiors crafted with modern aesthetics.</p>
+                	</div>
+            	</div>
 
-			<div class="box">
-				<img src="images/IMG-20260309-WA0098.jpg" alt="" loading="lazy">
-				<h3>construction consultant</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0098.jpg" alt="">
+                	<div class="overlay"></div>
 
-			<div class="box">
-				<img src="images/IMG-20260309-WA0080.jpg" alt="" loading="lazy">
-				<h3>interion design</h3>
-				<p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam beatae accusamus dolorem incidunt, consectetur sed modi voluptatem iusto dolor tempora? Ullam quia fuga optio adipisci sequi deserunt, alias asperiores temporibus!</p>
-			</div>
-		</div>
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0132.jpg" alt="">
+
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Luxury Construction</h3>
+                    	<p>Modern premium infrastructure and elegant architecture.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260312-WA0020.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Interior Design</h3>
+                    	<p>Luxury interiors crafted with modern aesthetics.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0081.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+        	</div>
+
+    	</div>
+
+    	<!-- SECOND ROW -->
+    	<div class="swiper services-slider bottom-slider">
+
+        	<div class="swiper-wrapper">
+
+            	<!-- Add more cards -->
+				 <!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0113.jpg" alt="">
+
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Luxury Construction</h3>
+                    	<p>Modern premium infrastructure and elegant architecture.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0096.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Interior Design</h3>
+                    	<p>Luxury interiors crafted with modern aesthetics.</p>
+                	</div>
+            	</div>
+
+            	<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0098.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0149.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0127.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0123.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<!-- CARD -->
+            	<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0122.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0115.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0114.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+
+				<div class="swiper-slide service-card">
+                	<img src="images/IMG-20260309-WA0111.jpg" alt="">
+                	<div class="overlay"></div>
+
+                	<div class="content">
+                    	<h3>Engineering</h3>
+                    	<p>High-end engineering systems and smart structures.</p>
+                	</div>
+            	</div>
+            	<!-- Duplicate again at end -->
+
+        	</div>
+
+    	</div>
+
 	</section>
 	<!-- services section ends -->
 
@@ -604,11 +824,62 @@
 			<div class="swiper-wrapper">
 
 				<div class="swiper-slide slider">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptatibus ipsa voluptas enim iste, </p>
+					<p>The team delivered elegant marble work and flawless painting with exceptional precision. Everything was completed neatly, on schedule, and with a high-end professional touch.</p>
 					<div class="user">
-						<img src="images/amos.jpg" alt="" loading="lazy">
+						<img src="images/Face(5).jpeg" alt="" loading="lazy">
 						<div class="info">
-							<h3>Niyonzima Amos</h3>
+							<h3>Mirry Willie</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<!-- <i class="fas fa-star"></i>
+								<i class="fas fa-star"></i> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>Very impressed with the quality of the painting and marble installation. The colors were perfectly matched, the surfaces were smooth, and the craftsmanship was outstanding from start to finish.</p>
+					<div class="user">
+						<img src="images/Face(4).jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Nshim Nikia</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<!-- <i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>The marble finishing and paint work completely transformed the space. The attention to detail, clean edges, and premium finish gave the entire building a luxurious feel.</p>
+					<div class="user">
+						<img src="images/Face(3).jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Kwiera Godfrey</h3>
+							<div class="star">
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<i class="fas fa-star"></i>
+								<!-- <i class="fas fa-star"></i> -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="swiper-slide slider">
+					<p>We were impressed by the professionalism, speed, and quality of work. The team kept us updated at every stage and delivered exactly what was promised. The results speak for themselves.</p>
+					<div class="user">
+						<img src="images/Face.jpeg" alt="" loading="lazy">
+						<div class="info">
+							<h3>Morgan Tery</h3>
 							<div class="star">
 								<i class="fas fa-star"></i>
 								<i class="fas fa-star"></i>
@@ -621,11 +892,11 @@
 				</div>
 
 				<div class="swiper-slide slider">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptatibus ipsa voluptas enim iste, </p>
+					<p>Excellent workmanship and very smooth communication throughout the project. Every detail was handled carefully, and the final structure looks modern, strong, and beautifully finished.</p>
 					<div class="user">
-						<img src="images/amos-1.jpg" alt="" loading="lazy">
+						<img src="images/Face(1).jpeg" alt="" loading="lazy">
 						<div class="info">
-							<h3>Nshimiye Nikiza</h3>
+							<h3>Eric Neo</h3>
 							<div class="star">
 								<i class="fas fa-star"></i>
 								<i class="fas fa-star"></i>
@@ -638,62 +909,11 @@
 				</div>
 
 				<div class="swiper-slide slider">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptatibus ipsa voluptas enim iste, </p>
+					<p>From the planning stage to the final finish, the team was professional, organized, and detail-oriented. The quality of the construction exceeded our expectations and the project was completed on time. Highly recommended</p>
 					<div class="user">
-						<img src="images/amos-2.jpg" alt="" loading="lazy">
+						<img src="images/Face(2).jpeg" alt="" loading="lazy">
 						<div class="info">
-							<h3>Kwizera Godfrey</h3>
-							<div class="star">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide slider">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptatibus ipsa voluptas enim iste, </p>
-					<div class="user">
-						<img src="images/amos-2.jpg" alt="" loading="lazy">
-						<div class="info">
-							<h3>Mfitumukiza Ismeal</h3>
-							<div class="star">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide slider">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptatibus ipsa voluptas enim iste, </p>
-					<div class="user">
-						<img src="images/amos-2.jpg" alt="" loading="lazy">
-						<div class="info">
-							<h3>Amos Neo</h3>
-							<div class="star">
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-								<i class="fas fa-star"></i>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="swiper-slide slider">
-					<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor voluptatibus ipsa voluptas enim iste, </p>
-					<div class="user">
-						<img src="images/amos-2.jpg" alt="" loading="lazy">
-						<div class="info">
-							<h3>Amos Neo</h3>
+							<h3>Andrew Freyman</h3>
 							<div class="star">
 								<i class="fas fa-star"></i>
 								<i class="fas fa-star"></i>
@@ -844,14 +1064,15 @@
 	</section>
 	<!-- footer section ends -->
 
+	<div id="videoPopup" class="video-popup">
+    	<span id="closePopup">&times;</span>
+    	<video id="popupVideo" controls></video>
+	</div>
+
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/lightgallery-js/1.4.0/js/lightgallery.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
 	<!-- custom javascript -->
 	<script src="js/script.js"></script>
 
-	<script>
-
-		lightGallery(document.querySelector('.projects .box-container'));
-	</script>
 </body>
 </html>

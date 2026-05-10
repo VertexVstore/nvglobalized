@@ -185,3 +185,240 @@ var projectBg = new Swiper(".project-bg", {
         disableOnInteraction: false,
     },
 });
+
+var topSlider = new Swiper(".top-slider", {
+
+    loop: true,
+    speed: 5000,
+    slidesPerView: 3,
+    spaceBetween: 25,
+    centeredSlides: true,
+
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+
+    allowTouchMove: true,
+
+    breakpoints: {
+
+        0: {
+            slidesPerView: 1,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        991: {
+            slidesPerView: 3,
+        }
+    }
+});
+
+var bottomSlider = new Swiper(".bottom-slider", {
+
+    loop: true,
+    speed: 5000,
+    slidesPerView: 3,
+    spaceBetween: 25,
+    centeredSlides: true,
+
+    autoplay: {
+        delay: 0,
+        reverseDirection: true,
+        disableOnInteraction: false,
+    },
+
+    allowTouchMove: true,
+
+    breakpoints: {
+
+        0: {
+            slidesPerView: 1,
+        },
+
+        768: {
+            slidesPerView: 2,
+        },
+
+        991: {
+            slidesPerView: 3,
+        }
+    }
+});
+
+window.addEventListener("load", () => {
+
+    if(window.location.hash === "#login"){
+
+        document.querySelector(".login-form")
+            .classList.add("active");
+
+    }
+
+});
+
+
+//////////////////////////////
+// 1. SWIPER INITIALIZATION
+//////////////////////////////
+
+document.querySelector(".row-left").classList.add("swiper");
+document.querySelector(".row-left").innerHTML =
+    `<div class="swiper-wrapper">` +
+    document.querySelector(".row-left").innerHTML +
+    `</div>`;
+
+document.querySelector(".row-right").classList.add("swiper");
+document.querySelector(".row-right").innerHTML =
+    `<div class="swiper-wrapper">` +
+    document.querySelector(".row-right").innerHTML +
+    `</div>`;
+
+document.querySelectorAll(".about-column").forEach(slide => {
+    slide.classList.add("swiper-slide");
+});
+
+new Swiper(".row-left", {
+    loop: true,
+    grabCursor: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    speed: 6000,
+    autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+    },
+    allowTouchMove: true,
+});
+
+new Swiper(".row-right", {
+    loop: true,
+    grabCursor: true,
+    slidesPerView: "auto",
+    spaceBetween: 20,
+    speed: 6000,
+    autoplay: {
+        delay: 0,
+        reverseDirection: true,
+        disableOnInteraction: false,
+    },
+    allowTouchMove: true,
+});
+
+
+//////////////////////////////
+// 2. VIDEO SYSTEM STATE
+//////////////////////////////
+
+const videos = Array.from(document.querySelectorAll(".about-column video"));
+
+let currentIndex = 0;
+
+const popup = document.getElementById("videoPopup");
+const popupVideo = document.getElementById("popupVideo");
+const closePopup = document.getElementById("closePopup");
+
+
+//////////////////////////////
+// 3. OPEN VIDEO POPUP
+//////////////////////////////
+
+videos.forEach((video, index) => {
+    video.addEventListener("click", (e) => {
+        e.stopPropagation();
+
+        currentIndex = index;
+
+        openPopup(video.src || video.currentSrc);
+    });
+});
+
+
+function openPopup(src) {
+    pauseAllBackgroundVideos();
+
+    popupVideo.src = src;
+    popup.style.display = "flex";
+    popupVideo.play();
+}
+
+
+//////////////////////////////
+// 4. SWIPE CONTROLS
+//////////////////////////////
+
+let startX = 0;
+
+popupVideo.addEventListener("touchstart", (e) => {
+    startX = e.touches[0].clientX;
+});
+
+popupVideo.addEventListener("touchend", (e) => {
+    let endX = e.changedTouches[0].clientX;
+    let diff = startX - endX;
+
+    if (Math.abs(diff) > 50) {
+        if (diff > 0) {
+            nextVideo();
+        } else {
+            prevVideo();
+        }
+    }
+});
+
+
+function nextVideo() {
+    currentIndex = (currentIndex + 1) % videos.length;
+    changeVideo();
+}
+
+function prevVideo() {
+    currentIndex = (currentIndex - 1 + videos.length) % videos.length;
+    changeVideo();
+}
+
+function changeVideo() {
+    popupVideo.pause();
+    popupVideo.src = videos[currentIndex].src;
+    popupVideo.play();
+}
+
+
+//////////////////////////////
+// 5. CLOSE POPUP
+//////////////////////////////
+
+function closeVideoPopup() {
+    popupVideo.pause();
+    popupVideo.src = "";
+    popup.style.display = "none";
+
+    resumeBackgroundVideos();
+}
+
+closePopup.addEventListener("click", closeVideoPopup);
+
+popup.addEventListener("click", (e) => {
+    if (e.target === popup) {
+        closeVideoPopup();
+    }
+});
+
+
+//////////////////////////////
+// 6. AUTOPLAY CONTROL
+//////////////////////////////
+
+function pauseAllBackgroundVideos() {
+    videos.forEach(v => v.pause());
+}
+
+function resumeBackgroundVideos() {
+    videos.forEach(v => {
+        v.play().catch(() => {});
+    });
+}
+
