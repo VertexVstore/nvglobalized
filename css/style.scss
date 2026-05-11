@@ -8,16 +8,12 @@
 	--light-bg:#eee;
 	--box-shadow:0 1.5rem 1rem rgba(0,0,0,.1);
 	--border:.1rem solid rgba(0,0,0,.3);
-}
 
-// FUTURISTIC ADDED DESIGN FROM ME STARTS HERE
-:root {
-  /* --- FUTURISTIC ACCENTS (NEW ONLY) --- */
-  --neon-blue: #00f5ff;
-  --neon-purple: #7b2cff;
-  --glass: rgba(255, 255, 255, 0.06);
-  --glow-blue: 0 0 15px rgba(0, 245, 255, 0.35);
-  --glow-purple: 0 0 15px rgba(123, 44, 255, 0.35);
+	--ui-primary: #3b82f6;
+	--ui-secondary: #60a5fa;
+	--hover-speed: .28s;
+	--hover-shadow:	0 12px 30px rgba(59,130,246,.18), 0 4px 12px rgba(0,0,0,.25);
+	--hover-shadow-strong: 0 20px 50px rgba(59,130,246,.25), 0 10px 25px rgba(0,0,0,.3);
 }
 
 .header,
@@ -75,14 +71,14 @@ body {
 }
 
 // PREMIUM FEEL STATRS HERE
-:root {
-  --lux-gold: #f5bf23;
-  --lux-dark: #0b0b10;
-  --lux-glass: rgba(255,255,255,0.06);
-  --lux-border: rgba(255,255,255,0.12);
-  --lux-shadow: 0 20px 60px rgba(0,0,0,0.35);
-  --lux-glow: 0 0 25px rgba(245,191,35,0.25);
-}
+// :root {
+//   --lux-gold: #f5bf23;
+//   --lux-dark: #0b0b10;
+//   --lux-glass: rgba(255,255,255,0.06);
+//   --lux-border: rgba(255,255,255,0.12);
+//   --lux-shadow: 0 20px 60px rgba(0,0,0,0.35);
+//   --lux-glow: 0 0 25px rgba(245,191,35,0.25);
+// }
 
 .cursor-glow {
   position: fixed;
@@ -185,7 +181,6 @@ body {
 .home .content h3 {
   font-size: 6rem;
   background: linear-gradient(90deg, #fff, var(--lux-gold));
-  -webkit-background-clip: text;
   color: transparent;
   text-shadow: 0 0 30px rgba(245,191,35,0.15);
 }
@@ -229,7 +224,7 @@ body {
 ================================ */
 
 .swiper-slide {
-  transition: transform 0.8s ease, opacity 0.8s ease;
+  transition: transform 0.8s ease;
 }
 
 /* Active slide floats slightly left */
@@ -254,7 +249,7 @@ body {
 
 /* Smooth hover luxury lift */
 .swiper-slide:hover {
-  transform: scale(1.05);
+//   transform: scale(1.05);
   transition: 0.5s ease;
 }
 // PREMIUM FEEL ENDS HERE
@@ -683,10 +678,10 @@ section{
                 transparent,
                 rgba(0,245,255,0.3)
             );
-            -webkit-mask: 
+            --webkit-mask: 
                 linear-gradient(#000 0 0) content-box, 
                 linear-gradient(#000 0 0);
-            -webkit-mask-composite: xor;
+            --webkit-mask-composite: xor;
             mask-composite: exclude;
             pointer-events: none;
         }
@@ -1014,179 +1009,6 @@ section{
 		}
 	}
 }
-
-
-// .services {
-//     background: #0b0b10;
-//     padding: 8rem 0;
-//     overflow: hidden;
-
-//     .heading {
-//         color: #fff;
-//         text-align: left;
-//         margin-left: 10%;
-//         margin-bottom: 5rem;
-//         font-size: 3.5rem;
-//         letter-spacing: 1px;
-//         position: relative;
-
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             left: 0;
-//             bottom: -10px;
-//             width: 80px;
-//             height: 3px;
-//             background: var(--lux-gold);
-//             box-shadow: var(--lux-glow);
-//         }
-//     }
-
-//     /* SWIPER WRAPPER */
-//     .services-slider {
-//         width: 100%;
-//         padding: 2rem 0;
-//     }
-
-//     .swiper-wrapper {
-//         align-items: center;
-//     }
-
-//     /* EACH SLIDE */
-//     .swiper-slide {
-//         width: 32rem;
-//         height: 45rem;
-//         border-radius: 2rem;
-//         overflow: hidden;
-//         position: relative;
-//         transition: transform 0.6s ease, opacity 0.6s ease;
-//         opacity: 0.4;
-//         transform: scale(0.85);
-//         cursor: pointer;
-
-//         /* IMAGE */
-//         img {
-//             width: 100%;
-//             height: 100%;
-//             object-fit: cover;
-//             transition: transform 1s ease, filter 0.8s ease;
-// 			filter: blur(0px);
-//         }
-
-//         /* DARK OVERLAY */
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             inset: 0;
-//             background: linear-gradient(
-//                 to top,
-//                 rgba(0,0,0,0.95),
-//                 rgba(0,0,0,0.4),
-//                 transparent
-//             );
-//             z-index: 1;
-//         }
-
-//         /* TEXT CONTENT */
-//         .content{
-//     		position: absolute;
-//     		bottom: 0;
-//     		left: 0;
-//     		z-index: 3;
-//     		padding: 3rem;
-//     		width: 100%;
-
-//     		/* this is the key improvement */
-//     		background: linear-gradient(
-//         		to top,
-//         		rgba(0,0,0,0.85),
-//         		rgba(0,0,0,0.4),
-//         		transparent
-//     		);
-
-//     		backdrop-filter: blur(6px);
-
-//     		h3{
-//         		font-size: 2.4rem;
-//        			color: #fff;
-//         		margin-bottom: 1rem;
-//         		letter-spacing: 0.5px;
-//         		text-shadow: 0 10px 30px rgba(0,0,0,0.6);
-//         		opacity: 0;
-//         		transform: translateY(40px);
-//         		transition: 0.7s ease;
-//    		 	}
-
-//     		p{
-//         		font-size: 1.5rem;
-//         		color: rgba(255,255,255,0.92);
-//         		line-height: 1.7;
-//         		text-shadow: 0 10px 25px rgba(0,0,0,0.5);
-//         		opacity: 0;
-//         		transform: translateY(60px);
-//         		transition: 0.9s ease;
-//     		}
-// 		}
-
-//         /* HOVER EFFECT */
-//         &:hover {
-//             transform: scale(1.05);
-
-//             img {
-//                 transform: scale(1.15);
-//             }
-
-//             .content h3,
-//             .content p {
-//                 opacity: 1;
-//                 transform: translateY(0);
-//             }
-//         }
-//     }
-
-//     /* CENTER SLIDE (ACTIVE) */
-//     .swiper-slide-active {
-//         opacity: 1;
-//         transform: scale(1);
-
-//         box-shadow: 0 30px 80px rgba(0,0,0,0.4),
-//                     var(--lux-glow);
-//     }
-
-//     /* SIDE SLIDES */
-//     .swiper-slide-prev,
-//     .swiper-slide-next {
-//         opacity: 0.6;
-//         transform: scale(0.9);
-//     }
-
-//     /* TOP ROW SPACING */
-//     .top-slider {
-//         margin-bottom: 5rem;
-//     }
-
-//     /* RESPONSIVE */
-//     @media (max-width: 991px) {
-
-//         .swiper-slide {
-//             width: 80%;
-//             height: 40rem;
-//         }
-
-//         .heading {
-//             margin-left: 5%;
-//             font-size: 3rem;
-//         }
-//     }
-
-//     @media (max-width: 600px) {
-
-//         .swiper-slide {
-//             width: 90%;
-//             height: 38rem;
-//         }
-//     }
-// }
 
 .services {
     background: #0b0b10;
@@ -1655,6 +1477,306 @@ i{
     color: white;
     cursor: pointer;
 }
+
+
+
+
+.staff {
+    padding: 5rem 9%;
+    background: #111;
+}
+
+.staff .heading {
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #fff;
+}
+
+/* style.scss */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.staff-page {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #fff;
+  padding: 50px 30px;
+}
+
+.team-section {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 60px;
+
+  h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #ffffff;
+  }
+
+  p {
+    max-width: 850px;
+    margin: auto;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #cbd5e1;
+  }
+}
+
+// Staff cards styling starts here
+
+.team-container {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+
+.staff-card {
+  flex: 1 1 320px;
+  max-width: 420px;
+//   width: 100%;
+
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 25px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  transition: 0.4s ease;
+  position: relative;
+
+  &:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    right: -100px;
+    width: 220px;
+    height: 220px;
+    background: rgba(59,130,246,0.2);
+    border-radius: 50%;
+  }
+}
+
+.image-box {
+  display: flex;
+  justify-content: center;
+  padding: 30px 20px 10px;
+  position: relative;
+  z-index: 2;
+
+  img {
+    width: 160px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 4px solid rgba(255,255,255,0.2);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+  }
+}
+
+.staff-info {
+  padding: 25px;
+
+  h2 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: #ffffff;
+  }
+
+  .role {
+    display: block;
+    text-align: center;
+    margin-bottom: 25px;
+    color: #60a5fa;
+    font-weight: 500;
+    font-size: 0.95rem;
+  }
+
+  ul {
+    list-style: none;
+
+    li {
+      position: relative;
+      padding-left: 22px;
+      margin-bottom: 15px;
+      color: #dbeafe;
+      line-height: 1.7;
+      font-size: 0.92rem;
+
+      &::before {
+        content: "•";
+        position: absolute;
+        left: 0;
+        color: #3b82f6;
+        font-size: 1.2rem;
+      }
+    }
+  }
+}
+
+/* Responsive Design */
+
+@media (max-width: 992px) {
+  .team-container {
+    // justify-content: center;
+	flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 30px 20px;
+  }
+
+  .section-header h1 {
+    font-size: 2.2rem;
+  }
+
+  .staff-card {
+    width: 100%;
+    max-width: 450px;
+  }
+}
+// Staff cards styling ends here
+
+// Testing image viewing in Projects section starts here
+
+.project-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.95);
+  display: none;
+  z-index: 9999;
+
+  &.active {
+    display: block;
+  }
+}
+
+.project-lightbox-swiper {
+  width: 100%;
+  height: 100%;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.project-lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 25px;
+  font-size: 40px;
+  color: #fff;
+  cursor: pointer;
+  z-index: 10000;
+}
+
+// Testing image viewing in Projects section ends here
+
+// Button hover effect for contact info
+
+/* UNIVERSAL INTERACTIVE SYSTEM */
+button,
+.btn,
+a,
+.staff-card,
+.box,
+input[type="submit"] {
+
+  transition:
+    transform var(--hover-speed) ease,
+    box-shadow var(--hover-speed) ease,
+    border-color var(--hover-speed) ease,
+    background var(--hover-speed) ease;
+
+  transform-origin: center;
+  will-change: transform;
+}
+
+/* OUTGROW */
+button:hover,
+.btn:hover,
+a:hover,
+.staff-card:hover,
+.box:hover,
+input[type="submit"]:hover {
+
+  transform: translateY(-4px) scale(1.03);
+
+  box-shadow: var(--hover-shadow);
+
+  border-color: rgba(96,165,250,.4);
+}
+
+/* INGROW (click/tap feel) */
+button:active,
+.btn:active,
+a:active,
+.staff-card:active,
+.box:active,
+input[type="submit"]:active {
+
+  transform: scale(.97);
+
+  box-shadow:
+    inset 0 4px 10px rgba(0,0,0,.25),
+    0 2px 8px rgba(59,130,246,.15);
+}
+
+/* PREMIUM GLOW FOR PRIMARY BUTTONS */
+button:hover,
+.btn:hover,
+input[type="submit"]:hover {
+
+  box-shadow: var(--hover-shadow-strong);
+}
+
+/* smoother mobile tapping */
+@media (hover: none) {
+
+  button,
+  .btn,
+  a,
+  .staff-card,
+  .box,
+  input[type="submit"] {
+    transition-duration: .18s;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

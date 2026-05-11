@@ -422,3 +422,63 @@ function resumeBackgroundVideos() {
     });
 }
 
+
+// Testing image viewing in Projects section stars here
+
+document.addEventListener("DOMContentLoaded", () => {
+
+  const lightbox = document.querySelector(".project-lightbox");
+  const closeBtn = document.querySelector(".project-lightbox-close");
+  const wrapper = document.querySelector(".project-lightbox-swiper .swiper-wrapper");
+
+  const boxes = document.querySelectorAll(".projects .box");
+
+  let images = [];
+
+  // collect images
+  boxes.forEach((box, index) => {
+    const img = box.querySelector("img").src;
+    images.push(img);
+
+    box.addEventListener("click", (e) => {
+      e.preventDefault();
+      openLightbox(index);
+    });
+  });
+
+  // build slides BEFORE swiper init
+  images.forEach((src) => {
+    const slide = document.createElement("div");
+    slide.className = "swiper-slide";
+    slide.innerHTML = `<img src="${src}">`;
+    wrapper.appendChild(slide);
+  });
+
+  // INIT SWIPER AFTER slides exist
+  const swiper = new Swiper(".project-lightbox-swiper", {
+    loop: true,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
+
+  function openLightbox(index) {
+    lightbox.classList.add("active");
+    swiper.update();
+    swiper.slideToLoop(index, 0);
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("active");
+  }
+
+  closeBtn.addEventListener("click", closeLightbox);
+
+  lightbox.addEventListener("click", (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+});
+
+// Testing image viewing in Projects section ends here
