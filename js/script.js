@@ -100,7 +100,7 @@ var swiper = new Swiper(".home-slider", {
   autoplay:{ delay: 3500,},
   grabCursor: true,
   speed: 1400,
-  spaceBetween: 40,
+  spaceBetween: 0,
   effect: "slide",
   navigation: {
     nextEl: ".swiper-button-next",
